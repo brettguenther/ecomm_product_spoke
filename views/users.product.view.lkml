@@ -1,23 +1,6 @@
 include: "//ecomm_hub/views/users.base.view"
 
 view: +users {
-  dimension: first_name {
-    label: "First Name"
-    hidden: yes
-    sql: CONCAT(UPPER(SUBSTR(${TABLE}.first_name,1,1)), LOWER(SUBSTR(${TABLE}.first_name,2))) ;;
-
-  }
-
-  dimension: last_name {
-    label: "Last Name"
-    hidden: yes
-    sql: CONCAT(UPPER(SUBSTR(${TABLE}.last_name,1,1)), LOWER(SUBSTR(${TABLE}.last_name,2))) ;;
-  }
-
-  dimension: name {
-    label: "Name"
-    sql: concat(${first_name}, ' ', ${last_name}) ;;
-  }
 
   dimension: age {
     label: "Age"
@@ -38,6 +21,24 @@ view: +users {
     style: integer
     sql: ${age} ;;
   }
+
+  dimension: first_name {
+    label: "First Name"
+    hidden: yes
+    sql: CONCAT(UPPER(SUBSTR(${TABLE}.first_name,1,1)), LOWER(SUBSTR(${TABLE}.first_name,2))) ;;
+  }
+
+  dimension: last_name {
+    label: "Last Name"
+    hidden: yes
+    sql: CONCAT(UPPER(SUBSTR(${TABLE}.last_name,1,1)), LOWER(SUBSTR(${TABLE}.last_name,2))) ;;
+  }
+
+  dimension: name {
+    label: "Name"
+    sql: concat(${first_name}, ' ', ${last_name}) ;;
+  }
+
 
   dimension: gender {
     label: "Gender"
