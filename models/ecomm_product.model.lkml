@@ -1,6 +1,6 @@
-connection: "default_bigquery_connection"
+connection: "bigquery_oauth"
 
-include: "/views/**/*.view.lkml"
+include: "/views/**/*.product.view.lkml"
 
 include: "//ecomm_hub/datagroups.base.lkml"
 
