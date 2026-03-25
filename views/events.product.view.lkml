@@ -1,10 +1,11 @@
+# explore: events {}
 view: events {
   sql_table_name: bigquery-public-data.thelook_ecommerce.events ;;
 
   dimension: event_id {
     label: "Event ID"
     type: number
-    primary_key: yes
+    # primary_key: yes
     sql: ${TABLE}.id ;;
   }
 
