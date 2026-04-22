@@ -2,6 +2,8 @@ connection: "default_bigquery_connection"
 
 include: "/views/**/*.product.view.lkml"
 
+include: "/views/order_items_partitioned_clustered.view"
+
 include: "//ecomm_hub/datagroups.base.lkml"
 
 include: "//ecomm_hub/explores/*.base.explore"
